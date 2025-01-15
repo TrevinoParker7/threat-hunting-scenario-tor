@@ -19,6 +19,18 @@ Management suspects that some employees may be using TOR browsers to bypass netw
 - **Check `DeviceProcessEvents`** for any signs of installation or usage.
 - **Check `DeviceNetworkEvents`** for any signs of outgoing connections over known TOR ports.
 
+```kql
+DeviceFileEvents
+| top 20 by Timestamp desc
+```
+```kql
+DeviceNetworkEvents
+| top 20 by Timestamp desc
+```
+```kql
+DeviceProcessEvents
+| top 20 by Timestamp desc
+```
 ---
 
 ## Steps Taken
